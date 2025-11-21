@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AeroSpace Dashboard</title>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+  body{display:flex;background:#eef3ff;}
+
+  /* Sidebar */
+  .sidebar{
+    width:220px;
+    background:#003e8a;
+    height:100vh;
+    color:white;
+    padding:20px;
+  }
+  .sidebar h2{margin-bottom:20px;font-size:22px;}
+  .sidebar a{
+    display:block;
+    color:white;
+    padding:10px;
+    margin-bottom:8px;
+    text-decoration:none;
+    border-radius:6px;
+  }
+  .sidebar a.active,
+  .sidebar a:hover{background:#014a9e;}
+
+  /* Main */
+  .main{
+    flex:1;
+    padding:20px;
+  }
+
+  .topbar{
+    background:white;
+    padding:15px;
+    border-radius:8px;
+    font-size:20px;
+    margin-bottom:20px;
+  }
+
+  /* Cards */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+  }
+  .card{
+    background:white;
+    padding:18px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  }
+  .card h3{font-size:15px;margin-bottom:8px;color:#444;}
+  .card p{font-size:22px;font-weight:bold;color:#003e8a;}
+
+  /* Table */
+  .table-box{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  }
+  table{width:100%;border-collapse:collapse;margin-top:10px;}
+  th,td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    font-size:14px;
+  }
+  .success{color:green;font-weight:bold;}
+  .warning{color:orange;font-weight:bold;}
+
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>AeroSpace ✈️</h2>
+  <a class="active">Dashboard</a>
+  <a>Bookings</a>
+  <a>Flights</a>
+  <a>Passengers</a>
+  <a>Payments</a>
+  <a>Settings</a>
+  <a>Logout</a>
+</div>
+
+<!-- Main -->
+<div class="main">
+
+  <div class="topbar">Dashboard</div>
+
+  <!-- Cards -->
+  <div class="cards">
+    <div class="card">
+      <h3>Total Bookings</h3>
+      <p>12,450</p>
+    </div>
+
+    <div class="card">
+      <h3>Active Flights</h3>
+      <p>45</p>
+    </div>
+
+    <div class="card">
+      <h3>Revenue</h3>
+      <p>₹ 8,20,000</p>
+    </div>
+
+    <div class="card">
+      <h3>Users</h3>
+      <p>52,300</p>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="table-box">
+    <h3>Recent Flights</h3>
+    <table>
+      <tr>
+        <th>Flight No</th>
+        <th>Destination</th>
+        <th>Status</th>
+        <th>Time</th>
+      </tr>
+
+      <tr>
+        <td>AS2401</td>
+        <td>Chennai → Delhi</td>
+        <td class="success">On-Time</td>
+        <td>10:45 AM</td>
+      </tr>
+
+      <tr>
+        <td>AS1904</td>
+        <td>Hyd → Dubai</td>
+        <td class="warning">Delayed</td>
+        <td>02:20 PM</td>
+      </tr>
+
+      <tr>
+        <td>AS3007</td>
+        <td>BLR → Singapore</td>
+        <td class="success">On-Time</td>
+        <td>07:10 PM</td>
+      </tr>
+
+    </table>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="hotel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="Home page 2.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home page 1 </a></li>
+            </ul>
+          </li>
+          <li><a href="./track.html">Track ur travel</a></li>
+          <li><a href="./hotel.html">Hotels in luxury</a></li>
+          <li><a href="./pt.html">Prepare to travel</a></li>
+          <li><a href="./cancell.html">Cancellations</a></li>
+          <li><a href="./checkin.html">Check-in</a></li>
+         <!-- <li><a href="./dashboard.html"></a></li> -->
+
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./cont.html'">Contact Us → </button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Experience True Five-Star Luxury</h1>
+      <p>World-class hospitality, signature dining, and premium suites crafted for comfort.</p>
+      <button class="hero-btn"> <a href="404.error.html">Book Now</a></button>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1560347876-aeef00ee58a1?q=80"
+           alt="Luxury Hotel">
+    </div>
+  </div>
+</section> 
+
+<!-- HERO SECTION
+<section class="hotel-hero">
+  <div class="hero-content">
+    <h1 class="fade-in">Experience Luxury Like Never Before</h1>
+    <p class="fade-in delay">Book Your Stay at Our Five-Star Hotel</p>
+    <a href="#" class="hero-btn fade-in delay2">Explore Rooms</a>
+  </div>
+</section> -->
+
+<!-- BOOKING FORM -->
+<section class="booking-section">
+  <form class="booking-box">
+    <h2>Book Your Stay</h2>
+
+    <div class="input-group">
+      <label>Check-In</label>
+      <input type="date" required>
+    </div>
+
+    <div class="input-group">
+      <label>Check-Out</label>
+      <input type="date" required>
+    </div>
+
+    <div class="input-group">
+      <label>Guests</label>
+      <select required>
+        <option value="">Select Guests</option>
+        <option>1 Guest</option>
+        <option>2 Guests</option>
+        <option>3 Guests</option>
+        <option>4 Guests</option>
+      </select>
+    </div>
+
+    <button type="submit" class="book-btn">Check Availability</button>
+  </form>
+</section>
+
+<section class="services">
+  <h2 class="section-title">Our Premium Services</h2>
+
+  <div class="service-container">
+
+    <div class="service-card fade-up">
+      <i class="fa-solid fa-spa"></i>
+      <h3>Spa & Wellness</h3>
+      <p>Relax with our world-class spa treatments and luxury therapies.</p>
+    </div>
+
+    <div class="service-card fade-up delay">
+      <i class="fa-solid fa-swimming-pool"></i>
+      <h3>Infinity Pool</h3>
+      <p>Enjoy a breathtaking rooftop infinity pool with a skyline view.</p>
+    </div>
+
+    <div class="service-card fade-up delay2">
+      <i class="fa-solid fa-utensils"></i>
+      <h3>Fine Dining</h3>
+      <p>Experience global flavors at our award-winning restaurant.</p>
+    </div>
+
+  </div>
+</section>
+<section class="rooms">
+  <h2 class="section-title">Featured Rooms</h2>
+  <div class="room-grid">
+
+    <div class="room-card">
+      <img src="hotelimg1.webp" alt="Deluxe Room">
+      <div class="room-info">
+        <h3>Deluxe King Room</h3>
+        <p>Spacious room with luxury interiors and premium amenities.</p>
+        <a href="404.error.html" class="room-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="home img2.webp" alt="Suite">
+      <div class="room-info">
+        <h3>Royal Suite</h3>
+        <p>Elegant suite with private  balcony and ocean view us.</p>
+        <a href="404.error.html" class="room-btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="room-card">
+      <img src="hotelimg3.webp" alt="Executive Room">
+      <div class="room-info">
+        <h3>Executive Room</h3>
+        <p>Perfect for business travelers with workspace & WiFi.</p>
+        <a href="404.error.html" class="room-btn">View Details</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="testimonials">
+  <h2 class="section-title">What Our Guests Say</h2>
+
+  <div class="testimonial-slider">
+    <div class="testimonial">
+      <p>"The best hotel I’ve stayed in. Luxury at its finest!"</p>
+      <h4>- Sarah Johnson</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"Amazing service and beautiful rooms. Highly recommended."</p>
+      <h4>- Michael Adams</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"The rooftop pool and spa were incredible!"</p>
+      <h4>- Priya Shankar</h4>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer>
+        <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Popular Flights</h3>
+      <a href="404.html">Chennai ➝ Delhi</a>
+      <a href="404.html">Mumbai ➝ Bengaluru</a>
+      <a href="404.html">Delhi ➝ Hyderabad</a>
+      <a href="404.html">Kolkata ➝ Pune</a>
+      <a href="404.html">Chennai ➝ Dubai</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Top Destinations</h3>
+      <a href="404.html">Singapore</a>
+      <a href="404.html">Dubai</a>
+      <a href="404.html">Malaysia</a>
+      <a href="404.html">Qatar</a>
+      <a href="404.html">Bangkok</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Information</h3>
+      <a href="404.html">Flight Status</a>
+      <a href="404.html">Manage Booking</a>
+      <a href="404.html">Check-in</a>
+      <a href="404.html">Cancellations</a>
+      <a href="404.html">Baggage Allowance</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">home</a>
+      <a href="safety.html">Safety</a>
+      <a href="cont.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="trips.html">Select Seat</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Get Our App</h3>
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" /> -->
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+      <h3 style="margin-top:25px;">Follow Us</h3>
+      <div class="social-icons">
+  <a href="404.html" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+  <a href="404.html" class="icon ig"><i class="fab fa-instagram"></i></a>
+  <a href="404.html" class="icon tw"><i class="fab fa-twitter"></i></a>
+  <a href="404.html" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+  <a href="404.html" class="icon yt"><i class="fab fa-youtube"></i></a>
+</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="hotel.js"></script>
+</body>
+
+</html>
+
+
+

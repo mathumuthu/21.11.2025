@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./Home page 2.html">Home page 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./booking.html">Booking</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./safety.html">Safety</a></li>
+          <li><a href="./trips.html">Select Seat</a></li>
+          <!-- <li><a href="./checkin.html">Check-in</a></li> -->
+         <li><a href="./dashboard.html">Dashboard</a></li>
+
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./contact.html'">Contact Us → </button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main id="aerospace-main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <h1>Fly High with AeroSpace</h1>
+      <p class="lead">Book flights, manage trips and explore top destinations with comfort & style.</p>
+
+     <form id="flight-search" class="search-box" onsubmit="event.preventDefault(); searchFlights();">
+
+        <input type="text" name="from" placeholder="From (city or airport)" aria-label="From" required>
+        <input type="text" name="to" placeholder="To (city or airport)" aria-label="To" required>
+        <input type="date" name="depart" aria-label="Departure date" required>
+        <button type="submit" class="btn">Search Flights</button>
+      </form>
+
+      <p id="statusMsg" class="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- POPULAR ROUTES -->
+  <section class="routes" aria-label="Popular routes">
+    <div class="container">
+      <h2>Popular Routes</h2>
+      <div class="route-grid">
+        <article class="route-card">
+          <img src="img1.webp" alt="Chennai to Delhi">
+          <p class="route-title">Chennai → Delhi</p>
+        </article>
+
+        <article class="route-card">
+          <img src="img2.webp" alt="Mumbai to Bengaluru">
+          <p class="route-title">Mumbai → Bengaluru</p>
+        </article>
+
+        <article class="route-card">
+          <img src="img3 (1).webp" alt="Delhi to Hyderabad">
+          <p class="route-title">Delhi → Hyderabad</p>
+        </article>
+
+        <article class="route-card">
+          <img src="img4.webp" alt="Pune to Kolkata">
+          <p class="route-title">Pune → Kolkata</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers" aria-label="Offers">
+    <div class="container">
+      <h2>Today's Deals</h2>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <img src="img5 (4).webp" alt="">
+          <div class="offer-body">
+            <h3>Summer Sale</h3>
+            <p>Up to 40% OFF on domestic flights.</p>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <img src="img6.webp" alt="">
+          <div class="offer-body">
+            <h3>Student Discount</h3>
+            <p>Extra 10kg baggage + ₹500 off.</p>
+          </div>
+        </div>
+
+        <div class="offer-card">
+          <img src="img7.webp" alt="">
+          <div class="offer-body">
+            <h3>Family Saver</h3>
+            <p>Save on group bookings — family packages available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why" aria-label="Why choose us">
+    <div class="container">
+      <h2>Why Fly with AeroSpace?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-media" aria-hidden="true">✈️</div>
+          <h3>On-Time Performance</h3>
+          <p>Reliable departures and punctual arrivals.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-media" aria-hidden="true">🪑</div>
+          <h3>Comfort Seating</h3>
+          <p>Extra legroom options and ergonomic seats.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-media" aria-hidden="true">🧳</div>
+          <h3>Flexible Baggage</h3>
+          <p>Custom baggage add-ons to suit your trip.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-media" aria-hidden="true">🌐</div>
+          <h3>Wi-Fi Onboard</h3>
+          <p>Stay connected while you fly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <h2>What Our Flyers Say</h2>
+      <div class="testi-grid">
+        <figure class="testi-card">
+          <img src="woman.webp" alt="Priya">
+          <blockquote>Super clean aircraft and great service!</blockquote>
+          <figcaption>— Priya</figcaption>
+        </figure>
+
+        <figure class="testi-card">
+          <img src="men.webp" alt="Arjun">
+          <blockquote>Easy booking and on-time takeoff!</blockquote>
+          <figcaption>— Arjun</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" aria-label="Gallery">
+    <div class="container">
+      <h2>Explore the Sky</h2>
+      <div class="gallery-grid">
+        <img src="img8 (1).webp" alt="plane in sky">
+        <img src="img9 (2).webp" alt="sunset flight">
+        <img src="img10.webp" alt="airport view">
+        <img src="img11.webp" alt="boarding">
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" aria-label="Subscribe">
+    <div class="container">
+      <h2>Subscribe for Offers</h2>
+      <p>Get exclusive flight deals in your inbox.</p>
+     <form id="newsletter-form" class="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter();">
+
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required aria-label="Email">
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+      <p id="newsletter-msg" class="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer>
+        <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Popular Flights</h3>
+      <a href="404.html">Chennai ➝ Delhi</a>
+      <a href="404.html">Mumbai ➝ Bengaluru</a>
+      <a href="404.html">Delhi ➝ Hyderabad</a>
+      <a href="404.html">Kolkata ➝ Pune</a>
+      <a href="404.html">Chennai ➝ Dubai</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Top Destinations</h3>
+      <a href="404.html">Singapore</a>
+      <a href="404.html">Dubai</a>
+      <a href="404.html">Malaysia</a>
+      <a href="404.html">Qatar</a>
+      <a href="404.html">Bangkok</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Information</h3>
+      <a href="404.html">Flight Status</a>
+      <a href="404.html">Manage Booking</a>
+      <a href="404.html">Check-in</a>
+      <a href="404.html">Cancellations</a>
+      <a href="404.html">Baggage Allowance</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">home</a>
+      <a href="safety.html">Safety</a>
+      <a href="cont.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="trips.html">Select Seat</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Get Our App</h3>
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" /> -->
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+      <h3 style="margin-top:25px;">Follow Us</h3>
+      <div class="social-icons">
+  <a href="404.html" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+  <a href="404.html" class="icon ig"><i class="fab fa-instagram"></i></a>
+  <a href="404.html" class="icon tw"><i class="fab fa-twitter"></i></a>
+  <a href="404.html" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+  <a href="404.html" class="icon yt"><i class="fab fa-youtube"></i></a>
+</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="./in.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="animation">
+    <img src="https://cdn-icons-png.flaticon.com/512/2023/2023189.png" class="rocket" alt="rocket">
+    <div class="stars"></div>
+  </div>
+
+  <h1>404</h1>
+  <h2>Oops! Page Not Found</h2>
+  <p>
+    The page you’re looking for has flown into space.<br>
+    Please return to the home page.
+  </p>
+
+  <a href="Home page 2.html" class="btn">Go Back Home</a>
+</div>
+<style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #0b0e2e, #1b1f46);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: 700;
+  animation: zoom 2s infinite alternate;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: -20px;
+  font-weight: 500;
+}
+
+p {
+  margin: 15px 0 25px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ff3b7b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff568f;
+  transform: scale(1.05);
+}
+
+/* Rocket */
+.animation {
+  position: relative;
+  height: 150px;
+}
+
+.rocket {
+  width: 100px;
+  animation: fly 3s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateY(20px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(20px); }
+}
+
+/* Moving Stars Effect */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 20px 2px white, 10px 40px 2px white, -20px 60px 2px white,
+              30px 80px 2px white, -30px 100px 2px white, 20px 120px 2px white;
+  animation: starsMove 8s linear infinite;
+}
+
+@keyframes starsMove {
+  0% { transform: translate(-50%, 0); }
+  100% { transform: translate(-50%, 150px); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 { font-size: 80px; }
+  h2 { font-size: 22px; }
+  p { font-size: 16px; }
+  .rocket { width: 70px; }
+}
+</style>
+
+<script>// Optional small animation glow effect
+document.addEventListener("mousemove", function(e) {
+  document.body.style.background = 
+    `radial-gradient(circle at ${e.clientX}px ${e.clientY}px, #1b204d, #0b0e2e)`;
+});
+</script>
+</body>
+</html>

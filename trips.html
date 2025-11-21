@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="trips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./Home page 2.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home page 2</a></li>
+            </ul>
+          </li>
+           <li><a href="./booking.html">Booking</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./safety.html">Safety</a></li>
+          <li><a href="./trips.html">Select Seat</a></li>
+          <!-- <li><a href="./checkin.html">Check-in</a></li> -->
+         <li><a href="./dashboard.html">Dashboard</a></li>
+
+          <!-- <li><a href="./login.html">Log In</a></li> -->
+          <!-- <li class="sign"><button onclick="window.location.href='./cont.html'">Contact Us → </button></li> -->
+
+          <li><a href="./login.html">Log In</a></li>
+  <li class="sign"><button onclick="window.location.href='./contact.html'">Contact Us → </button></li>        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+    <h2>Select Your Seat</h2>
+
+    <!-- Seat Legend -->
+    <div class="legend">
+        <span style="background:#dfe6ff;">Economy</span>
+        <span style="background:#ffe6c2;">Premium</span>
+        <span style="background:#c6fff1;">Business</span>
+    </div>
+
+    <!-- Seat Map -->
+    <div class="seat-map" id="seatMap">
+        <!-- Business Class -->
+        <div class="seat business-seat">1A</div>
+        <div class="seat business-seat">1B</div>
+        <div class="seat business-seat">1C</div>
+        <div class="seat business-seat">1D</div>
+        <div class="seat business-seat">1E</div>
+        <div class="seat business-seat">1F</div>
+
+        <!-- Premium -->
+        <div class="seat premium-seat">2A</div>
+        <div class="seat premium-seat">2B</div>
+        <div class="seat premium-seat">2C</div>
+        <div class="seat premium-seat">2D</div>
+        <div class="seat premium-seat">2E</div>
+        <div class="seat premium-seat">2F</div>
+
+        <!-- Economy -->
+        <div class="seat">3A</div>
+        <div class="seat">3B</div>
+        <div class="seat">3C</div>
+        <div class="seat">3D</div>
+        <div class="seat">3E</div>
+        <div class="seat">3F</div>
+
+        <div class="seat">4A</div>
+        <div class="seat">4B</div>
+        <div class="seat">4C</div>
+        <div class="seat">4D</div>
+        <div class="seat">4E</div>
+        <div class="seat">4F</div>
+    </div>
+
+    <button class="btn" onclick="openUpgrade()"> <a href="404.html">Upgrade Seat</a></button>
+
+</div>
+ 
+<!-- Upgrade Modal -->
+<div class="modal" id="upgradeModal"> 
+     <div class="modal-box"> 
+         <h3>Select Upgrade Option</h3> 
+
+        <div class="upgrade-option" onclick="selectUpgrade('Premium Seat – ₹1499')"> 
+            ⭐ Premium Upgrade – ₹1499 
+         </div> 
+
+         <div class="upgrade-option" onclick="selectUpgrade('Business Class – ₹3999')"> 
+            🚀 Business Class – ₹3999 
+         </div> 
+
+        <button class="close" onclick="closeUpgrade()"> Close</button> 
+    </div> 
+ </div>  
+
+
+
+
+
+
+
+
+<script> // Select seats
+    document.querySelectorAll(".seat").forEach(seat => {
+        seat.addEventListener("click", () => {
+            document.querySelectorAll(".seat").forEach(s => s.classList.remove("selected"));
+            seat.classList.add("selected");
+        });
+    });
+
+    // Modal open
+    function openUpgrade(){
+        let selected = document.querySelector(".seat.selected");
+        if(!selected){
+            alert("Please select a seat first!");
+            return;
+        }
+        document.getElementById("upgradeModal").classList.add("active");
+    }
+
+    // Modal close
+    function closeUpgrade(){
+        document.getElementById("upgradeModal").classList.remove("active");
+    }
+
+    // Confirm upgrade
+    function selectUpgrade(type){
+        let seat = document.querySelector(".seat.selected").innerText;
+        alert(`Seat ${seat} upgraded to: ${type}`);
+        closeUpgrade();
+        
+    }</script>
+
+
+
+
+
+
+
+
+
+ <footer>
+        <footer class="footer">
+  <div class="footer-container">
+
+   <div class="footer-col">
+      <h3>Popular Flights</h3>
+      <a href="404.html">Chennai ➝ Delhi</a>
+      <a href="404.html">Mumbai ➝ Bengaluru</a>
+      <a href="404.html">Delhi ➝ Hyderabad</a>
+      <a href="404.html">Kolkata ➝ Pune</a>
+      <a href="404.html">Chennai ➝ Dubai</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Top Destinations</h3>
+      <a href="404.html">Singapore</a>
+      <a href="404.html">Dubai</a>
+      <a href="404.html">Malaysia</a>
+      <a href="404.html">Qatar</a>
+      <a href="404.html">Bangkok</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Information</h3>
+      <a href="404.html">Flight Status</a>
+      <a href="404.html">Manage Booking</a>
+      <a href="404.html">Check-in</a>
+      <a href="404.html">Cancellations</a>
+      <a href="404.html">Baggage Allowance</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">home</a>
+      <a href="safety.html">Safety</a>
+      <a href="cont.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="trips.html">Select Seat</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Get Our App</h3>
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" /> -->
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+      <h3 style="margin-top:25px;">Follow Us</h3>
+      <div class="social-icons">
+  <a href="404.html" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+  <a href="404.html" class="icon ig"><i class="fab fa-instagram"></i></a>
+  <a href="404.html" class="icon tw"><i class="fab fa-twitter"></i></a>
+  <a href="404.html" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+  <a href="404.html" class="icon yt"><i class="fab fa-youtube"></i></a>
+</div>
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="./booking.js"></script>
+</body>
+</html>

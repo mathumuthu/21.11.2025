@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./index.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./Home page 2.html">Home page 2</a></li>
+            </ul>
+          </li>
+          <li><a href="./booking.html">Booking</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./safety.html">Safety</a></li>
+          <li><a href="./trips.html">Select Seat</a></li>
+          <!-- <li><a href="./checkin.html">Check-in</a></li> -->
+         <li><a href="./dashboard.html">Dashboard</a></li>
+
+          <li><a href="./login.html">Log In</a></li>
+  <li class="sign"><button onclick="window.location.href='./contact.html'">Contact Us → </button></li>        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">AeroSpace</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="controls">
+        <button id="darkToggle" class="btn small">Dark</button>
+      </div>
+    </div>
+  </header> -->
+
+  <main>
+    <!-- hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Space-grade Services — safe, fast, reliable.</h1>
+          <p>From payload integration to in-orbit maintenance, our aerospace suite covers mission planning, telemetry, avionics upgrades and passenger safety animations.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="404.html">Explore Services</a>
+            <a class="btn ghost" href="404.html">Request Quote</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <!-- animated scene (rocket + orbits + planet) -->
+          <div class="scene" aria-hidden="true">
+            <div class="planet"></div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+
+            <!-- rocket -->
+            <div class="rocket-wrap">
+              <svg class="rocket" viewBox="0 0 64 64" width="160" height="160" role="img" aria-label="Animated rocket">
+                <g transform="translate(0,0)">
+                  <path d="M32 2c6 0 12 2 16 6 4 4 6 10 6 16 0 10-8 22-22 38C22 46 14 34 14 24 14 14 22 6 32 2z" fill="#e6eefb"/>
+                  <rect x="26" y="26" width="12" height="12" rx="3" fill="#0b2b46"/>
+                  <path d="M22 38c6 4 14 4 20 0" stroke="#ffb03b" stroke-width="3" stroke-linecap="round" fill="none"/>
+                </g>
+              </svg>
+              <div class="rocket-flame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clouds" aria-hidden="true">
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="cloud c3"></div>
+      </div>
+    </section>
+
+    <!-- services grid -->
+    <section id="services" class="services container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="lead">Mission-ready capabilities for modern aerospace projects.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Launch Integration</h3>
+          <p>Full stack payload prep and vehicle integration, CDR review support and launch readiness checks.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🛰️</div>
+          <h3>Satellite Ops</h3>
+          <p>Telemetry & command, constellation management, anomaly resolution and lifetime extension services.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🔧</div>
+          <h3>Avionics & Hardware</h3>
+          <p>Custom avionics design, radiation-hardening advice and component traceability for flight hardware.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📡</div>
+          <h3>Ground Systems</h3>
+          <p>Ground station setup, secure uplink/downlink, scheduling and site coverage analysis.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🧑‍🚀</div>
+          <h3>Safety & Training</h3>
+          <p>Operational safety training, cabin/crew protocols, emergency simulation and cert support.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Mission Analytics</h3>
+          <p>Flight performance analysis, predictive maintenance and telemetry-driven decision support.</p>
+          <a class="link-cta" href="404.html">Learn more →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- highlight / CTA -->
+    <section class="cta container">
+      <div class="cta-inner">
+        <h3>Ready to launch your next mission?</h3>
+        <p>Contact our mission specialists and get a tailored plan with timeline & cost estimate.</p>
+        <a href="404.html" class="btn large">Contact Mission Ops</a>
+      </div>
+    </section>
+
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer>
+        <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Popular Flights</h3>
+      <a href="404.html">Chennai ➝ Delhi</a>
+      <a href="404.html">Mumbai ➝ Bengaluru</a>
+      <a href="404.html">Delhi ➝ Hyderabad</a>
+      <a href="404.html">Kolkata ➝ Pune</a>
+      <a href="404.html">Chennai ➝ Dubai</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Top Destinations</h3>
+      <a href="404.html">Singapore</a>
+      <a href="404.html">Dubai</a>
+      <a href="404.html">Malaysia</a>
+      <a href="404.html">Qatar</a>
+      <a href="404.html">Bangkok</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Information</h3>
+      <a href="404.html">Flight Status</a>
+      <a href="404.html">Manage Booking</a>
+      <a href="404.html">Check-in</a>
+      <a href="404.html">Cancellations</a>
+      <a href="404.html">Baggage Allowance</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">home</a>
+      <a href="safety.html">Safety</a>
+      <a href="cont.html">Contact Us</a>
+      <a href="services.html">Services</a>
+      <a href="trips.html">Select Seat</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Get Our App</h3>
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" /> -->
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+      <h3 style="margin-top:25px;">Follow Us</h3>
+      <div class="social-icons">
+  <a href="404.html" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+  <a href="404.html" class="icon ig"><i class="fab fa-instagram"></i></a>
+  <a href="404.html" class="icon tw"><i class="fab fa-twitter"></i></a>
+  <a href="404.html" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+  <a href="404.html" class="icon yt"><i class="fab fa-youtube"></i></a>
+</div>
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+    <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+<script src="./services.js"></script>
+</body>
+</html>
