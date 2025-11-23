@@ -652,6 +652,51 @@ section:nth-child(even) { background: #fff; }
 
 
 
+/* Hide mobile dropdowns on desktop */
+.mobile-date-picker {
+  display: none;
+}
+
+/* Show mobile dropdowns under 768px */
+@media (max-width: 768px) {
+  .mobile-date-picker {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  .desktop-date {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

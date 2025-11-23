@@ -652,59 +652,61 @@ function subscribeNewsletter() {
 
 
 // FILL MOBILE DAY/MONTH/YEAR
-const day = document.getElementById("mDay");
-const month = document.getElementById("mMonth");
-const year = document.getElementById("mYear");
+document.addEventListener("DOMContentLoaded", () => {
 
-// Add days
-for (let d = 1; d <= 31; d++) {
-  day.innerHTML += `<option value="${d}">${d}</option>`;
-}
+  // FILL MOBILE DAY/MONTH/YEAR
+  const day = document.getElementById("mDay");
+  const month = document.getElementById("mMonth");
+  const year = document.getElementById("mYear");
 
-// Add months
-const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-months.forEach((m, i) => {
-  month.innerHTML += `<option value="${i+1}">${m}</option>`;
-});
-
-// Add years
-const currentYear = new Date().getFullYear();
-for (let y = currentYear; y <= currentYear + 3; y++) {
-  year.innerHTML += `<option value="${y}">${y}</option>`;
-}
-
-
-// SEARCH BUTTON CLICK
-document.getElementById("searchBtn").addEventListener("click", function() {
-  
-  let finalDate = "";
-
-  // MOBILE VIEW
-  if (window.innerWidth <= 768) {
-    const d = day.value;
-    const m = month.value;
-    const y = year.value;
-
-    if (!d || !m || !y) {
-      alert("Please select day, month and year");
-      return;
-    }
-
-    finalDate = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+  // Add days
+  for (let d = 1; d <= 31; d++) {
+    day.innerHTML += `<option value="${d}">${d}</option>`;
   }
 
-  // DESKTOP VIEW
-  else {
-    finalDate = document.getElementById("dDate").value;
+  // Add months
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  months.forEach((m, i) => {
+    month.innerHTML += `<option value="${i+1}">${m}</option>`;
+  });
 
-    if (!finalDate) {
-      alert("Please select a date");
-      return;
-    }
+  // Add years
+  const currentYear = new Date().getFullYear();
+  for (let y = currentYear; y <= currentYear + 3; y++) {
+    year.innerHTML += `<option value="${y}">${y}</option>`;
   }
 
-  // SUCCESS → GO TO NEXT PAGE
-  window.location.href = "404.html";
+  // SEARCH BUTTON CLICK
+  document.getElementById("searchBtn").addEventListener("click", function () {
+
+    let finalDate = "";
+
+    // MOBILE VIEW
+    if (window.innerWidth <= 768) {
+      const d = day.value;
+      const m = month.value;
+      const y = year.value;
+
+      if (!d || !m || !y) {
+        alert("Please select day, month, and year");
+        return;
+      }
+
+      finalDate = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    }
+
+    // DESKTOP VIEW
+    else {
+      finalDate = document.getElementById("dDate").value;
+
+      if (!finalDate) {
+        alert("Please select a date");
+        return;
+      }
+    }
+
+    // SUCCESS → REDIRECT
+    window.location.href = "404.html";
+  });
+
 });
-
-
