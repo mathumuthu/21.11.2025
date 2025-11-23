@@ -63,75 +63,23 @@
 
 
 
+ <div class="booking-box">
+    <h2>✈ AeroSpace Flight Booking</h2>
 
-<section class="booking-section">
-  <div class="booking-container">
+    <label>From</label>
+    <input type="text" class="input-field" placeholder="Chennai (MAA)" required>
 
-    <h2 class="booking-title">Search Your Flight</h2>
-    <p class="booking-subtitle">Book domestic & international flights with exclusive offers.</p>
+    <label>To</label>
+    <input type="text" class="input-field" placeholder="New Delhi (DEL)" required>
 
-    <!-- Trip Type -->
-    <div class="trip-type">
-      <button class="trip-btn active" data-type="oneway">One Way</button>
-      <button class="trip-btn" data-type="round">Round Trip</button>
-    </div>
+    <label>Check-In</label>
+    <input type="date" id="checkin" class="input-field" required>
 
-    <form id="flightForm">
+    <label>Check-Out</label>
+    <input type="date" id="checkout" class="input-field" required>
 
-      <!-- From & To -->
-      <div class="location-box">
-        <div class="input-group">
-          <label>From</label>
-          <input type="text" placeholder="Chennai (MAA)" required>
-        </div>
-
-        <!-- <button type="button" class="swap-btn">
-          <i class="fa-solid fa-arrow-right-arrow-left"></i>
-        </button> -->
-
-        <div class="input-group">
-          <label>To</label>
-          <input type="text" placeholder="Delhi (DEL)" required>
-        </div>
-      </div>
-
-      <!-- Dates -->
-      <div class="date-box">
-        <div class="input-group">
-          <label>Departure</label>
-          <input type="date" required>
-        </div>
-
-        <div class="input-group return-date" style="display:none;">
-          <label>Return</label>
-          <input type="date">
-        </div>
-      </div>
-
-      <!-- Passenger & Class -->
-      <div class="passenger-box">
-        <div class="input-group">
-          <label>Passengers</label>
-          <input type="number" min="1" value="1" required>
-        </div>
-
-        <div class="input-group">
-          <label>Class</label>
-          <select required>
-            <option>Economy</option>
-            <option>Premium Economy</option>
-            <option>Business</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Submit -->
-      <button class="search-btn">Search Flight</button>
-
-    </form>
+    <button class="btn" onclick="validate()">Search Flights</button>
   </div>
-</section>
-
 
 
 

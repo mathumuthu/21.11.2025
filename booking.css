@@ -360,136 +360,64 @@ span{
 
 
 
-.booking-section {
-  padding: 50px 20px;
-  background: linear-gradient(to bottom right, #eef5ff, #ffffff);
-  animation: fadeIn 1s ease-in-out;
-}
 
-.booking-container {
-  max-width: 850px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-}
 
-.booking-title {
-  font-size: 28px;
-  font-weight: 700;
-  text-align: center;
-}
+    .booking-box {
+      max-width: 500px;
+      margin: auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
 
-.booking-subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 15px;
-  color: #555;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
-/* Trip Buttons */
-.trip-type {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+    label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+    }
 
-.trip-btn {
-  padding: 10px 20px;
-  border: 1px solid #4a74f5;
-  border-radius: 30px;
-  background: #ffffff;
-  cursor: pointer;
-  transition: 0.3s;
-}
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
 
-.trip-btn.active {
-  background: #4a74f5;
-  color: #fff;
-}
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #00c6ff;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-/* Input Boxes */
-.location-box,
-.date-box,
-.passenger-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
+    /* Mobile Date Fix */
+    input[type="date"] {
+      background: white;
+      color: black;
+    }
 
-.input-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.input-group label {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.input-group input,
-.input-group select {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 15px;
-}
-
-.swap-btn {
-  background: #4a74f5;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.swap-btn:hover {
-  background: #2e56cf;
-}
-
-/* Search Button */
-.search-btn {
-  width: 100%;
-  padding: 15px;
-  background: #4a74f5;
-  color: #fff;
-  border: none;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.search-btn:hover {
-  background: #2649c5;
-}
-
-/* Animation */
-@keyframes fadeIn {
-  0% {opacity: 0; transform: translateY(20px);}
-  100% {opacity: 1; transform: translateY(0);}
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .location-box,
-  .date-box,
-  .passenger-box {
-    flex-direction: column;
-  }
-
-  .swap-btn {
-    transform: rotate(90deg);
-  }
-}
+    /* Make date text visible on mobile */
+    input[type="date"]::-webkit-datetime-edit,
+    input[type="date"]::-webkit-datetime-edit-fields-wrapper,
+    input[type="date"]::-webkit-datetime-edit-text,
+    input[type="date"]::-webkit-datetime-edit-month-field,
+    input[type="date"]::-webkit-datetime-edit-day-field,
+    input[type="date"]::-webkit-datetime-edit-year-field {
+      color: black;
+      font-size: 16px;
+    }
 
 
 

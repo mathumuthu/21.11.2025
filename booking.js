@@ -173,81 +173,28 @@ document.querySelectorAll("footer a").forEach(link => {
 
 
 
-// Trip Type Toggle
-const tripButtons = document.querySelectorAll(".trip-btn");
-const returnDate = document.querySelector(".return-date");
+function validate() {
+  let from = document.querySelector('input[placeholder="Chennai (MAA)"]').value.trim();
+  let to = document.querySelector('input[placeholder="New Delhi (DEL)"]').value.trim();
+  let checkin = document.getElementById("checkin").value;
+  let checkout = document.getElementById("checkout").value;
 
-tripButtons.forEach(btn => {
-  btn.addEventListener("click", () => {
+  // Check if empty
+  if (!from || !to || !checkin || !checkout) {
+    alert("❗ Please fill all fields before continuing");
+    return;
+  }
 
-    // Remove active class from both buttons
-    tripButtons.forEach(b => b.classList.remove("active"));
+  // Check date order
+  if (checkout < checkin) {
+    alert("❗ Check-out date must be AFTER Check-in date");
+    return;
+  }
 
-    // Add active to clicked button
-    btn.classList.add("active");
+  // Success → Go to next page
+  // alert("✔ All fields completed! Redirecting...");
 
-    const type = btn.dataset.type;
-
-    // Show / Hide Return Date input
-    if (type === "round") {
-      returnDate.style.display = "block";
-      returnDate.querySelector("input").required = true;
-    } else {
-      returnDate.style.display = "none";
-      returnDate.querySelector("input").required = false;
-    }
-  });
-});
-
-
-// Swap From <> To
-document.querySelector(".swap-btn").addEventListener("click", () => {
-  const inputs = document.querySelectorAll(".location-box input");
-  let temp = inputs[0].value;
-  inputs[0].value = inputs[1].value;
-  inputs[1].value = temp;
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.querySelector("#flightForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // stop form from submitting automatically
-
-    // Get all form values
-    const from = document.querySelector(".location-box .input-group:nth-child(1) input").value.trim();
-    const to = document.querySelector(".location-box .input-group:nth-child(3) input").value.trim();
-    const depart = document.querySelector(".date-box .input-group input[type='date']").value;
-    const roundActive = document.querySelector(".trip-btn.active").dataset.type === "round";
-    const returnDate = document.querySelector(".return-date input").value;
-    const passengers = document.querySelector(".passenger-box input[type='number']").value;
-    const travelClass = document.querySelector(".passenger-box select").value;
-
-    // Validation
-    if (from === "" || to === "" || depart === "" || passengers === "" || travelClass === "") {
-        alert("Please fill all required fields!");
-        return;
-    }
-
-    // If round trip, return date is required
-    if (roundActive && returnDate === "") {
-        alert("Please select a return date!");
-        return;
-    }
-
-    // If everything is filled → go to next page
-    window.location.href = "404.html";  // <-- change this to your page
-});
+  // Change this URL to your next page
+  window.location.href = "404.html";
+}
 
