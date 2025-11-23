@@ -755,6 +755,127 @@ span{
 
 
 
+/* Fix for mobile date picker visibility */
+.booking-card input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #333;
+}
+
+/* Remove overflow issues causing missing month text */
+.booking-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: visible !important;
+}
+
+/* Better responsive layout */
+.booking-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .booking-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .booking-card input[type="date"],
+  .booking-card select {
+    font-size: 18px;
+    padding: 14px;
+  }
+}
+
+/* Fix text cut in iPhone & Android */
+input[type="date"]::-webkit-datetime-edit {
+  padding: 0 4px;
+  color: #333;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
