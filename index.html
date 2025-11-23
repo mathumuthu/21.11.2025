@@ -85,41 +85,31 @@
       <h1>Fly High with AeroSpace</h1>
       <p class="lead">Book flights, manage trips and explore top destinations with comfort & style.</p>
 
-    <form id="flight-search" class="search-box" onsubmit="event.preventDefault(); searchFlights();">
-  <input type="text" name="from" placeholder="From (city or airport)" required>
-  <input type="text" name="to" placeholder="To (city or airport)" required>
+   <form id="flight-search" class="search-box" onsubmit="return searchFlights();">
 
-  <!-- <input type="date" name="depart" aria-label="Departure date" required> -->
+  <form id="flight-search" class="search-box" onsubmit="return searchFlights();">
 
+  <!-- MOBILE DATE PICKER -->
+  <div class="mobile-date-picker">
+    <select id="mDay" required>
+      <option value="">Day</option>
+    </select>
 
+    <select id="mMonth" required>
+      <option value="">Month</option>
+    </select>
 
+    <select id="mYear" required>
+      <option value="">Year</option>
+    </select>
+  </div>
 
- <!-- MOBILE DATE PICKER -->
-<div class="mobile-date-picker">
-  <select id="mDay">
-    <option value="">Day</option>
-  </select>
-
-  <select id="mMonth">
-    <option value="">Month</option>
-  </select>
-
-  <select id="mYear">
-    <option value="">Year</option>
-  </select>
-</div>
-
-<!-- DESKTOP DATE PICKER -->
-<input type="date" id="dDate" name="depart" required>
-
-
-
-<!-- Keep original for desktop -->
-<input type="date" id="desktop-date" name="depart" required>
-
+  <!-- DESKTOP DATE PICKER -->
+  <input type="date" id="dDate" name="depart" class="desktop-date" required>
 
   <button type="submit" class="btn">Search Flights</button>
 </form>
+
 
 
 

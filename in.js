@@ -650,3 +650,60 @@ function searchFlights() {
   }, 10);
 }
 
+
+
+
+
+
+
+
+/* FILL MOBILE DAY/MONTH/YEAR */
+const day = document.getElementById("mDay");
+const month = document.getElementById("mMonth");
+const year = document.getElementById("mYear");
+
+for (let d = 1; d <= 31; d++) {
+  day.innerHTML += `<option value="${d}">${d}</option>`;
+}
+
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+months.forEach((m, i) => {
+  month.innerHTML += `<option value="${i+1}">${m}</option>`;
+});
+
+const currentYear = new Date().getFullYear();
+for (let y = currentYear; y <= currentYear + 3; y++) {
+  year.innerHTML += `<option value="${y}">${y}</option>`;
+}
+
+/* VALIDATION + REDIRECT */
+function searchFlights() {
+  let finalDate = "";
+
+  // Mobile mode
+  if (window.innerWidth <= 768) {
+    const d = mDay.value;
+    const m = mMonth.value;
+    const y = mYear.value;
+
+    if (!d || !m || !y) {
+      alert("Please fill all fields");
+      return false;
+    }
+
+    finalDate = `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
+  } 
+  else {
+    finalDate = document.getElementById("dDate").value;
+    if (!finalDate) {
+      alert("Please fill all fields");
+      return false;
+    }
+  }
+
+  // 🔥 SUCCESS → Redirect to next page
+  window.location.href = "result.html";  // change your page name here
+
+  return false; // prevent default
+}
+
