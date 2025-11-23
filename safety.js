@@ -58,3 +58,24 @@ document.querySelectorAll("footer a").forEach(link => {
         }
     });
 });
+
+
+
+
+
+
+
+
+// Quick Tips alert
+document.getElementById('tipBtn').addEventListener('click', (e) => {
+  e.preventDefault();
+  alert('Tip: Keep medication and important documents in your carry-on.');
+});
+
+// Report a safety concern mail link
+document.getElementById('reportIssue').addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href =
+    'mailto:safety@aerospace.example?subject=Safety%20Concern&body=Please%20describe%20the%20issue%20here.';
+});
+

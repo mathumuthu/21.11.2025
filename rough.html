@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AeroSpace — Safety</title>
+
+  <link rel="stylesheet" href="booking.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* -------- SAFETY PAGE STYLES (YOUR ORIGINAL — FIXED) -------- */
+
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0066cc;
+      --glass: rgba(255,255,255,0.7);
+      font-family: Inter, system-ui;
+    }
+
+    .dark{
+      --bg:#0b1220;
+      --card:#071226;
+      --muted:#9aa6bd;
+      --glass: rgba(255,255,255,0.05);
+    }
+
+    body{
+      background:var(--bg);
+      margin:0;
+      overflow-x:hidden;
+    }
+
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+
+    /* Safety Hero Section */
+    .safety-hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:24px;
+      align-items:center;
+    }
+    @media(max-width:880px){
+      .safety-hero{grid-template-columns:1fr}
+    }
+
+    .hero-left{
+      padding:28px;
+      border-radius:16px;
+      background:linear-gradient(180deg,#fff,var(--glass));
+      box-shadow:0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .safety-features{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .feature{
+      flex:1 1 160px;
+      padding:14px;
+      border-radius:12px;
+      background:var(--card);
+      display:flex;
+      gap:12px;
+    }
+
+    /* Right side animation */
+    .hero-right{
+      position:relative;
+      padding:18px;
+      border-radius:16px;
+      min-height:260px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#e8f2ff,#f8fbff);
+    }
+
+    @keyframes cloudMove{0%{transform:translateX(0)}100%{transform:translateX(1400px)}}
+
+    .cloud{
+      width:180px;height:70px;border-radius:50px;
+      position:absolute;background:#fff;
+      filter:drop-shadow(0 6px 18px rgba(0,0,0,0.1));
+    }
+
+    /* Cards */
+    .cards{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+    @media(max-width:880px){
+      .cards{grid-template-columns:1fr}
+    }
+
+    .card{
+      padding:14px;
+      background:var(--card);
+      border-radius:12px;
+    }
+
+    /* FAQ */
+    .faq .q{
+      padding:12px;
+      background:var(--card);
+      margin-bottom:8px;
+      border-radius:10px;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+    }
+    .qa-body{
+      padding:12px;
+      background:#f1f5f9;
+      border-radius:8px;
+      margin-bottom:10px;
+      display:none;
+    }
+
+    /* Emergency Sticky */
+    .emergency{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#fff7f7;
+      padding:12px;
+      border-radius:12px;
+      box-shadow:0 8px 28px rgba(0,0,0,0.1);
+      z-index:999;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- 🔵 TOPBAR + NAVBAR FIXED -->
+<!-- ========================= -->
+
+<div class="topbar">
+  <header class="header">
+    <div class="logo">
+      <img src="logo.webp" />
+      <h2>STACKLY</h2>
+    </div>
+
+    <button class="hamburger" id="hamburger">☰</button>
+  </header>
+
+  <nav class="navBar" id="navBar">
+    <div class="navLinks">
+      <ul class="linkRight">
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="safety.html">Safety</a></li>
+        <li><a href="trips.html">Select Seat</a></li>
+
+        <li><a href="login.html">Log In</a></li>
+
+        <li class="sign">
+          <button onclick="window.location.href='contact.html'">Contact Us →</button>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<!-- ========================= -->
+<!-- 🔵 SAFETY SECTION -->
+<!-- ========================= -->
+
+<div class="container">
+
+  <section class="safety-hero">
+
+    <div class="hero-left">
+      <h2>Passenger Safety & Care</h2>
+      <p class="lead">Safe journeys, clean cabins, clear procedures.</p>
+
+      <!-- Safety Features -->
+      <div class="safety-features">
+        <div class="feature"><div>🧯</div>Safety Equipment</div>
+        <div class="feature"><div>🩺</div>Health & Hygiene</div>
+        <div class="feature"><div>🔒</div>Security Screening</div>
+      </div>
+
+      <!-- Cards -->
+      <div class="cards">
+        <div class="card">
+          <h3>Pre-Flight</h3>
+          <ul class="checklist">
+            <li>Carry ID</li>
+            <li>Declare items</li>
+            <li>Arrive early</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Onboard</h3>
+          <ul class="checklist">
+            <li>Follow crew</li>
+            <li>Wear seatbelt</li>
+            <li>Report concerns</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Health</h3>
+          <ul class="checklist">
+            <li>HEPA filters</li>
+            <li>Medical kit</li>
+            <li>Accessibility support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="faq">
+        <div class="q" data-target="a1">Medical help? →</div>
+        <div id="a1" class="qa-body">Crew trained for emergencies.</div>
+
+        <div class="q" data-target="a2">Bring medicine? →</div>
+        <div id="a2" class="qa-body">Allowed — keep in cabin.</div>
+
+        <div class="q" data-target="a3">Safety checks? →</div>
+        <div id="a3" class="qa-body">Inspected before every flight.</div>
+      </div>
+
+    </div>
+
+    <aside class="hero-right">
+      <div class="cloud" style="top:10px;left:-80px;animation:cloudMove 18s linear infinite"></div>
+      <div class="cloud" style="top:90px;left:-120px;width:120px;animation:cloudMove 25s linear infinite"></div>
+      <div class="cloud" style="top:160px;left:-150px;width:200px;animation:cloudMove 30s linear infinite"></div>
+    </aside>
+
+  </section>
+
+</div>
+
+<!-- ========================= -->
+<!-- 🔵 EMERGENCY STICKY -->
+<!-- ========================= -->
+
+<div class="emergency">
+  <strong>Emergency?</strong>
+  <p>Call: +91 12345 67890</p>
+</div>
+
+<!-- ========================= -->
+<!-- 🔵 JAVASCRIPT FIXED -->
+<!-- ========================= -->
+
+<script>
+  // Mobile Menu
+  document.getElementById("hamburger").onclick = () => {
+    document.getElementById("navBar").classList.toggle("active");
+  };
+
+  // FAQ Toggle
+  document.querySelectorAll(".q").forEach(q => {
+    q.onclick = () => {
+      const id = q.getAttribute("data-target");
+      const body = document.getElementById(id);
+
+      body.style.display = (body.style.display === "block") ? "none" : "block";
+    };
+  });
+</script>
+
+</body>
+</html>

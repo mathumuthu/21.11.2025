@@ -49,7 +49,7 @@ span{
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background:whitesmoke;
+  background:#233042;;
 }
 .header .logo {
   display: flex;
@@ -65,7 +65,7 @@ span{
 .header .logo h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: rgb(7, 2, 19);
+  color:whitesmoke;
 }
 .header .contact {
   text-align: right;
@@ -354,6 +354,198 @@ span{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------
+   Fix Button Hover – GLOBAL
+------------------------------ */
+
+/* -----------------------------
+   FIX BUTTON HOVER AND STYLING
+------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0057b8;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 102, 204, 0.25);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid rgba(0, 102, 204, 0.4);
+}
+
+.btn.secondary:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 102, 204, 0.25);
+}
+
+/* Remove underline from <a> inside buttons */
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn:hover a,
+.btn.secondary:hover a {
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hover effect for Quick Tips & Report a Safety Concern */
+#tipBtn,
+#reportIssue {
+  transition: 0.28s ease;
+}
+
+#tipBtn:hover,
+#reportIssue:hover {
+  background: var(--accent);
+  color: #fff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.30);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   background: #0d1724;
   color: #ffffff;
@@ -505,6 +697,105 @@ span{
     opacity: 1;
     transform: translateY(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

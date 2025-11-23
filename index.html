@@ -85,13 +85,15 @@
       <h1>Fly High with AeroSpace</h1>
       <p class="lead">Book flights, manage trips and explore top destinations with comfort & style.</p>
 
-     <form id="flight-search" class="search-box" onsubmit="event.preventDefault(); searchFlights();">
+    <form id="flight-search" class="search-box" onsubmit="event.preventDefault(); searchFlights();">
+  <input type="text" name="from" placeholder="From (city or airport)" required>
+  <input type="text" name="to" placeholder="To (city or airport)" required>
 
-        <input type="text" name="from" placeholder="From (city or airport)" aria-label="From" required>
-        <input type="text" name="to" placeholder="To (city or airport)" aria-label="To" required>
-        <input type="date" name="depart" aria-label="Departure date" required>
-        <button type="submit" class="btn">Search Flights</button>
-      </form>
+  <input type="date" name="depart" aria-label="Departure date" required>
+
+  <button type="submit" class="btn">Search Flights</button>
+</form>
+
 
       <p id="statusMsg" class="status" aria-live="polite"></p>
     </div>
@@ -306,9 +308,9 @@
     </div>
 
     <div class="footer-col">
-      <h3>Get Our App</h3>
-      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" /> -->
-      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+      <!-- <h3>Get Our App</h3> -->
+        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Google_Play_Store_badge_EN.svg" class="app-badge" />  -->
+     <!-- <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />  </h1> -->
       <h3 style="margin-top:25px;">Follow Us</h3>
       <div class="social-icons">
   <a href="404.html" class="icon fb"><i class="fab fa-facebook-f"></i></a>
@@ -325,14 +327,60 @@
     <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
   </div>
 </footer>
+<style>/* Hero Search Box */
+.search-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.search-box input,
+.search-box button {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+}
 
+.search-box input[type="date"] {
+  color: #666;
+  background-color: #fff;
+}
 
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+    gap: 15px;
+  }
 
+  .search-box input,
+  .search-box button {
+    width: 100%;
+    font-size: 18px;   /* Makes it easy to tap on mobile */
+    padding: 16px;
+  }
 
+  /* SPECIAL FIX FOR DATE PICKER */
+  .search-box input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    padding: 16px;
+  }
 
-
-
+  /* Optional — show a calendar icon */
+  .search-box input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+  }
+}
+</style>
 
 
 <script src="./in.js"></script>

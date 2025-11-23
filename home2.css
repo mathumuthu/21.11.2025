@@ -49,7 +49,7 @@ span{
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background:whitesmoke;
+  background:#233042;;
 }
 .header .logo {
   display: flex;
@@ -65,7 +65,7 @@ span{
 .header .logo h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: rgb(7, 2, 19);
+  color:whitesmoke;
 }
 .header .contact {
   text-align: right;

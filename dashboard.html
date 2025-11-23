@@ -1,162 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AeroSpace Dashboard</title>
-
-<style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-  body{display:flex;background:#eef3ff;}
-
-  /* Sidebar */
-  .sidebar{
-    width:220px;
-    background:#003e8a;
-    height:100vh;
-    color:white;
-    padding:20px;
-  }
-  .sidebar h2{margin-bottom:20px;font-size:22px;}
-  .sidebar a{
-    display:block;
-    color:white;
-    padding:10px;
-    margin-bottom:8px;
-    text-decoration:none;
-    border-radius:6px;
-  }
-  .sidebar a.active,
-  .sidebar a:hover{background:#014a9e;}
-
-  /* Main */
-  .main{
-    flex:1;
-    padding:20px;
-  }
-
-  .topbar{
-    background:white;
-    padding:15px;
-    border-radius:8px;
-    font-size:20px;
-    margin-bottom:20px;
-  }
-
-  /* Cards */
-  .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-  }
-  .card{
-    background:white;
-    padding:18px;
-    border-radius:8px;
-    text-align:center;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  }
-  .card h3{font-size:15px;margin-bottom:8px;color:#444;}
-  .card p{font-size:22px;font-weight:bold;color:#003e8a;}
-
-  /* Table */
-  .table-box{
-    margin-top:20px;
-    background:white;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
-  }
-  table{width:100%;border-collapse:collapse;margin-top:10px;}
-  th,td{
-    padding:12px;
-    border-bottom:1px solid #ddd;
-    font-size:14px;
-  }
-  .success{color:green;font-weight:bold;}
-  .warning{color:orange;font-weight:bold;}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroSpace Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- Sidebar -->
 <div class="sidebar">
-  <h2>AeroSpace ✈️</h2>
-  <a class="active">Dashboard</a>
-  <a>Bookings</a>
-  <a>Flights</a>
-  <a>Passengers</a>
-  <a>Payments</a>
-  <a>Settings</a>
-  <a>Logout</a>
+<div class="logo-box">
+  <img src="logo .webp" alt="logo">
+  <span>STACKLY</span>
+</div>
+ <ul>
+  <li class="active"><i class="fa fa-gauge"></i> <a href="dashboard.html">Dashboard</a></li>
+  <li><i class="fa fa-plane"></i> <a href="404.html">Flights</a></li>
+  <li><i class="fa fa-ticket"></i> <a href="404.html">Bookings</a></li>
+  <li><i class="fa fa-user"></i> <a href="404.html">Profile</a></li>
+  <li><i class="fa fa-gear"></i> <a href="404.html">Settings</a></li>
+</ul>
+
 </div>
 
-<!-- Main -->
 <div class="main">
+  <header>
+    <h1>Dashboard Overview</h1>
+    <div class="user">
+      <i class="fa fa-bell"></i>
+      <img src="https://i.postimg.cc/0QNxYF7d/user.png" alt="user">
+    </div>
+  </header>
 
-  <div class="topbar">Dashboard</div>
-
-  <!-- Cards -->
-  <div class="cards">
+  <section class="cards">
     <div class="card">
+      <i class="fa fa-plane-departure icon"></i>
+      <h3>Upcoming Flights</h3>
+      <p>12</p>
+    </div>
+
+    <div class="card">
+      <i class="fa fa-ticket icon"></i>
       <h3>Total Bookings</h3>
-      <p>12,450</p>
+      <p>48</p>
     </div>
 
     <div class="card">
-      <h3>Active Flights</h3>
-      <p>45</p>
+      <i class="fa fa-users icon"></i>
+      <h3>Active Users</h3>
+      <p>326</p>
     </div>
 
     <div class="card">
-      <h3>Revenue</h3>
-      <p>₹ 8,20,000</p>
+      <i class="fa fa-cloud-sun icon"></i>
+      <h3>Weather Updates</h3>
+      <p>Clear</p>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Users</h3>
-      <p>52,300</p>
-    </div>
-  </div>
-
-  <!-- Table -->
-  <div class="table-box">
-    <h3>Recent Flights</h3>
+  <section class="flight-table">
+    <h2>Recent Flight Status</h2>
     <table>
       <tr>
-        <th>Flight No</th>
-        <th>Destination</th>
+        <th>Flight</th>
+        <th>Route</th>
         <th>Status</th>
         <th>Time</th>
       </tr>
-
       <tr>
-        <td>AS2401</td>
-        <td>Chennai → Delhi</td>
-        <td class="success">On-Time</td>
-        <td>10:45 AM</td>
+        <td>AI 202</td>
+        <td>Delhi → Mumbai</td>
+        <td class="status green">On Time</td>
+        <td>08:45 AM</td>
       </tr>
-
       <tr>
-        <td>AS1904</td>
-        <td>Hyd → Dubai</td>
-        <td class="warning">Delayed</td>
-        <td>02:20 PM</td>
+        <td>6E 403</td>
+        <td>Chennai → Dubai</td>
+        <td class="status yellow">Boarding</td>
+        <td>09:20 AM</td>
       </tr>
-
       <tr>
-        <td>AS3007</td>
-        <td>BLR → Singapore</td>
-        <td class="success">On-Time</td>
-        <td>07:10 PM</td>
+        <td>SG 117</td>
+        <td>Kolkata → Bengaluru</td>
+        <td class="status red">Delayed</td>
+        <td>10:10 AM</td>
       </tr>
-
     </table>
-  </div>
-
+  </section>
 </div>
+<style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+  display: flex;
+  background: #f4f7fb;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #0a1d37;
+  color: #fff;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.sidebar ul li {
+  list-style: none;
+  padding: 15px;
+  cursor: pointer;
+  margin: 5px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: #132b52;
+}
+
+/* Main */
+.main {
+  margin-left: 250px;
+  padding: 20px;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+header .user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .user img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Cards */
+.cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.card .icon {
+  font-size: 28px;
+  color: #0a58ff;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Table */
+.flight-table {
+  margin-top: 40px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+.status { font-weight: bold; }
+.green { color: green; }
+.yellow { color: #d6a300; }
+.red { color: red; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main {
+    margin-left: 200px;
+  }
+}
+
+
+
+.card .btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: #0a58ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.card .btn:hover {
+  background: #063bb3;
+}
+
+/* Sidebar links */
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+.sidebar ul li:hover a {
+  color: #cfe3ff;
+}
+
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.logo-box img {
+  width: 35px;
+  height: 35px;
+}
+
+.logo-box span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<script>// Sidebar Active Effect
+let items = document.querySelectorAll(".sidebar ul li");
+items.forEach(li => {
+  li.onclick = () => {
+    items.forEach(a => a.classList.remove("active"));
+    li.classList.add("active");
+  };
+});
+</script>
 </body>
 </html>
