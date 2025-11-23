@@ -260,3 +260,205 @@ function subscribeNewsletter() {
     }, 150);
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// window.onload = function () {
+//   const day = document.getElementById("day");
+//   const month = document.getElementById("month");
+//   const year = document.getElementById("year");
+
+//   // Fill Days
+//   for (let d = 1; d <= 31; d++) {
+//     day.innerHTML += `<option value="${d}">${d}</option>`;
+//   }
+
+//   // Fill Months
+//   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+//   months.forEach((m, i) => {
+//     month.innerHTML += `<option value="${i+1}">${m}</option>`;
+//   });
+
+//   // Fill Years (today → +5 years)
+//   const currentYear = new Date().getFullYear();
+//   for (let y = currentYear; y <= currentYear + 5; y++) {
+//     year.innerHTML += `<option value="${y}">${y}</option>`;
+//   }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function searchFlights() {
+//   let finalDate;
+
+//   // Desktop selector
+//   if (window.innerWidth > 600) {
+//     finalDate = document.getElementById("desktop-date").value;
+//   }
+//   // Mobile selector
+//   else {
+//     const d = document.getElementById("day").value;
+//     const m = document.getElementById("month").value;
+//     const y = document.getElementById("year").value;
+
+//     if (!d || !m || !y) {
+//       alert("Please select a valid date");
+//       return;
+//     }
+
+//     finalDate = `${y}-${m}-${d}`;
+//   }
+
+//   console.log("Selected Date:", finalDate);
+//   alert("Flight search date: " + finalDate);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.onload = function () {
+  const day = document.getElementById("day");
+  const month = document.getElementById("month");
+  const year = document.getElementById("year");
+
+  // DAYS
+  for (let d = 1; d <= 31; d++) {
+    day.innerHTML += `<option value="${d}">${d}</option>`;
+  }
+
+  // MONTHS
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  months.forEach((m, i) => {
+    month.innerHTML += `<option value="${i+1}">${m}</option>`;
+  });
+
+  // YEARS
+  let currentYear = new Date().getFullYear();
+  for (let y = currentYear; y <= currentYear + 5; y++) {
+    year.innerHTML += `<option value="${y}">${y}</option>`;
+  }
+};
+
+function searchFlights() {
+  let from = document.querySelector("input[name='from']").value;
+  let to = document.querySelector("input[name='to']").value;
+  let finalDate;
+
+  // Desktop mode
+  if (window.innerWidth > 600) {
+    finalDate = document.getElementById("desktop-date").value;
+  } 
+  // Mobile mode
+  else {
+    let d = document.getElementById("day").value;
+    let m = document.getElementById("month").value;
+    let y = document.getElementById("year").value;
+
+    if (d && m && y) {
+      finalDate = `${y}-${m}-${d}`;
+    } else {
+      finalDate = "";
+    }
+  }
+
+  // Validation
+  if (!from || !to || !finalDate) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  // Redirect to another page
+  window.location.href = "404.html"; 
+}
+

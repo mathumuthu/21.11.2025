@@ -89,10 +89,112 @@
   <input type="text" name="from" placeholder="From (city or airport)" required>
   <input type="text" name="to" placeholder="To (city or airport)" required>
 
-  <input type="date" name="depart" aria-label="Departure date" required>
+  <!-- <input type="date" name="depart" aria-label="Departure date" required> -->
+
+
+
+
+  <!-- MOBILE DATE PICKER -->
+<div class="mobile-date-picker">
+  <select id="day">
+    <option value="">Day</option>
+  </select>
+
+  <select id="month">
+    <option value="">Month</option>
+  </select>
+
+  <select id="year">
+    <option value="">Year</option>
+  </select>
+</div>
+
+<!-- DESKTOP DATE PICKER -->
+<input type="date" id="desktop-date" name="depart">
+
+
+<!-- Keep original for desktop -->
+<input type="date" id="desktop-date" name="depart" required>
+
 
   <button type="submit" class="btn">Search Flights</button>
 </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <p id="statusMsg" class="status" aria-live="polite"></p>

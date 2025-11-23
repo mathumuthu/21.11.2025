@@ -602,6 +602,85 @@ section:nth-child(even) { background: #fff; }
 
 
 
+
+
+/* Hide mobile picker on desktop */
+.mobile-date-picker {
+  display: none;
+  gap: 10px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 600px) {
+  #desktop-date {
+    display: none;
+  }
+
+  .mobile-date-picker {
+    display: flex;
+  }
+
+  .mobile-date-picker select {
+    width: 32%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer {
   background: #0d1724;
   color: #ffffff;

@@ -99,29 +99,28 @@
 
 <!-- BOOKING FORM -->
  <div class="booking-wrapper">
-<div class="booking-card">
+  <div class="booking-card">
     <h2>Book Your Stay</h2>
 
-  <label for="checkin">Check-In</label>
-<input type="date" id="checkin" name="checkin" class="date-input" autocomplete="off">
+    <label for="checkin">Check-In</label>
+    <input type="date" id="checkin" name="checkin" placeholder="Select check-in">
 
-<label for="checkout">Check-Out</label>
-<input type="date" id="checkout" name="checkout" class="date-input" autocomplete="off">
+    <label for="checkout">Check-Out</label>
+    <input type="date" id="checkout" name="checkout" placeholder="Select check-out">
 
-
-
-    <label>Guests</label>
-    <select id="guests">
-        <option selected>Select Guests</option>
-        <option>1 Guest</option>
-        <option>2 Guests</option>
-        <option>3 Guests</option>
-        <option>4+ Guests</option>
+    <label for="guests">Guests</label>
+    <select id="guests" name="guests">
+      <option value="" selected disabled>Select Guests</option>
+      <option value="1">1 Guest</option>
+      <option value="2">2 Guests</option>
+      <option value="3">3 Guests</option>
+      <option value="4">4+ Guests</option>
     </select>
 
-    <button class="check-btn">Check Availability</button>
+    <button class="check-btn" type="button">Check Availability</button>
+  </div>
 </div>
-</div>
+
 
 </section>
 
