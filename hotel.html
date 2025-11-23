@@ -98,33 +98,29 @@
 </section> -->
 
 <!-- BOOKING FORM -->
-<section class="booking-section">
-  <form class="booking-box">
+ <div class="booking-wrapper">
+<div class="booking-card">
     <h2>Book Your Stay</h2>
 
-    <div class="input-group">
-      <label>Check-In</label>
-      <input type="date" required>
-    </div>
+    <label>Check-In</label>
+    <input type="date" id="checkin">
 
-    <div class="input-group">
-      <label>Check-Out</label>
-      <input type="date" required>
-    </div>
+    <label>Check-Out</label>
+    <input type="date" id="checkout">
 
-    <div class="input-group">
-      <label>Guests</label>
-      <select required>
-        <option value="">Select Guests</option>
+    <label>Guests</label>
+    <select id="guests">
+        <option selected>Select Guests</option>
         <option>1 Guest</option>
         <option>2 Guests</option>
         <option>3 Guests</option>
-        <option>4 Guests</option>
-      </select>
-    </div>
+        <option>4+ Guests</option>
+    </select>
 
-    <button type="submit" class="book-btn">Check Availability</button>
-  </form>
+    <button class="check-btn">Check Availability</button>
+</div>
+</div>
+
 </section>
 
 <section class="services">
@@ -289,7 +285,7 @@
 
     <div class="footer-col">
       <h3>Support</h3>
-      <a href="#">home</a>
+      <a href="Home page 2.html">home</a>
       <a href="safety.html">Safety</a>
       <a href="cont.html">Contact Us</a>
       <a href="services.html">Services</a>
