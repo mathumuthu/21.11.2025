@@ -85,30 +85,29 @@
       <h1>Fly High with AeroSpace</h1>
       <p class="lead">Book flights, manage trips and explore top destinations with comfort & style.</p>
 
-   <form id="flight-search" class="search-box" onsubmit="return searchFlights();">
-
-  <form id="flight-search" class="search-box" onsubmit="return searchFlights();">
+   <form id="flight-search" class="search-box">
 
   <!-- MOBILE DATE PICKER -->
   <div class="mobile-date-picker">
-    <select id="mDay" required>
+    <select id="mDay">
       <option value="">Day</option>
     </select>
 
-    <select id="mMonth" required>
+    <select id="mMonth">
       <option value="">Month</option>
     </select>
 
-    <select id="mYear" required>
+    <select id="mYear">
       <option value="">Year</option>
     </select>
   </div>
 
   <!-- DESKTOP DATE PICKER -->
-  <input type="date" id="dDate" name="depart" class="desktop-date" required>
+  <input type="date" id="dDate" class="desktop-date">
 
-  <button type="submit" class="btn">Search Flights</button>
+  <button type="button" class="btn" id="searchBtn">Search Flights</button>
 </form>
+
 
 
 

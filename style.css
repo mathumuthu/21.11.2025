@@ -608,12 +608,14 @@ section:nth-child(even) { background: #fff; }
   gap: 10px;
 }
 
-.mobile-date-picker select {
+.mobile-date-picker select,
+.desktop-date {
   padding: 10px;
   font-size: 16px;
   border-radius: 6px;
 }
 
+/* MOBILE VIEW */
 @media (max-width: 768px) {
   .mobile-date-picker {
     display: flex;
