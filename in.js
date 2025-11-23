@@ -407,58 +407,246 @@ function subscribeNewsletter() {
 
 
 
-window.onload = function () {
-  const day = document.getElementById("day");
-  const month = document.getElementById("month");
-  const year = document.getElementById("year");
+// window.onload = function () {
+//   const day = document.getElementById("day");
+//   const month = document.getElementById("month");
+//   const year = document.getElementById("year");
 
-  // DAYS
+//   // DAYS
+//   for (let d = 1; d <= 31; d++) {
+//     day.innerHTML += `<option value="${d}">${d}</option>`;
+//   }
+
+//   // MONTHS
+//   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+//   months.forEach((m, i) => {
+//     month.innerHTML += `<option value="${i+1}">${m}</option>`;
+//   });
+
+//   // YEARS
+//   let currentYear = new Date().getFullYear();
+//   for (let y = currentYear; y <= currentYear + 5; y++) {
+//     year.innerHTML += `<option value="${y}">${y}</option>`;
+//   }
+// };
+
+// function searchFlights() {
+//   let from = document.querySelector("input[name='from']").value;
+//   let to = document.querySelector("input[name='to']").value;
+//   let finalDate;
+
+//   // Desktop mode
+//   if (window.innerWidth > 600) {
+//     finalDate = document.getElementById("desktop-date").value;
+//   } 
+//   // Mobile mode
+//   else {
+//     let d = document.getElementById("day").value;
+//     let m = document.getElementById("month").value;
+//     let y = document.getElementById("year").value;
+
+//     if (d && m && y) {
+//       finalDate = `${y}-${m}-${d}`;
+//     } else {
+//       finalDate = "";
+//     }
+//   }
+
+//   // Validation
+//   if (!from || !to || !finalDate) {
+//     alert("Please fill all required fields");
+//     return;
+//   }
+
+//   // Redirect to another page
+//   window.location.href = "404.html"; 
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------- searchFlights() - call from form onsubmit --------- */
+function searchFlights(evt) {
+  // If called from an event, prevent default
+  if (evt && evt.preventDefault) evt.preventDefault();
+
+  const status = document.getElementById('statusMsg');
+  const form = document.getElementById('flight-search');
+  const btn = form.querySelector('button[type="submit"]');
+
+  // get text inputs
+  const from = (form.querySelector('input[name="from"]') || {}).value || '';
+  const to   = (form.querySelector('input[name="to"]')   || {}).value || '';
+
+  // date: prefer desktop date input if visible, otherwise combine mobile selects
+  const desktopInput = document.getElementById('desktopDate');
+  let dateValue = '';
+
+  // If desktop input exists and is visible (non-empty and not display:none), use it
+  if (desktopInput && desktopInput.value && getComputedStyle(desktopInput).display !== 'none') {
+    dateValue = desktopInput.value;
+  } else {
+    // fallback to mobile selects (ids: mDay, mMonth, mYear)
+    const d = document.getElementById('mDay') ? document.getElementById('mDay').value : '';
+    const m = document.getElementById('mMonth') ? document.getElementById('mMonth').value : '';
+    const y = document.getElementById('mYear') ? document.getElementById('mYear').value : '';
+
+    if (d && m && y) {
+      // ensure two-digit month/day
+      const mm = String(m).padStart(2,'0');
+      const dd = String(d).padStart(2,'0');
+      dateValue = `${y}-${mm}-${dd}`;
+    } else {
+      dateValue = '';
+    }
+  }
+
+  // Basic validation
+  if (!from.trim()) {
+    status.textContent = 'Please enter a "From" city or airport.';
+    (form.querySelector('input[name="from"]') || {}).focus();
+    return false;
+  }
+  if (!to.trim()) {
+    status.textContent = 'Please enter a "To" city or airport.';
+    (form.querySelector('input[name="to"]') || {}).focus();
+    return false;
+  }
+  if (!dateValue) {
+    status.textContent = 'Please select a departure date.';
+    return false;
+  }
+
+  // Good — start search
+  status.textContent = 'Searching flights...';
+  btn.disabled = true;
+  btn.setAttribute('aria-busy', 'true');
+
+  // Example: redirect to a search-results page with query params.
+  // Replace 'search-results.html' with your actual results page or AJAX call.
+  const params = new URLSearchParams({
+    from: from.trim(),
+    to: to.trim(),
+    depart: dateValue
+  });
+
+  // Small timeout to show the "Searching..." state; remove if you want immediate redirect
+  setTimeout(() => {
+    // If you prefer AJAX, replace this redirect with fetch() to your API.
+    window.location.href = '404.html?' + params.toString();
+  }, 500);
+
+  return false; // prevent default when used inline
+}
+
+/* ---------- Defensive: also attach event listener in case inline was removed ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('flight-search');
+  if (!form) return;
+
+  // Ensure only one desktop date input exists; if duplicates exist, keep the first
+  const desktops = document.querySelectorAll('input[type="date"][id="desktopDate"]');
+  if (desktops.length > 1) {
+    // remove duplicates after the first
+    for (let i = 1; i < desktops.length; i++) desktops[i].remove();
+  }
+
+  // Attach submit handler (if your form already uses inline onsubmit it's fine)
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    return searchFlights();
+  });
+
+  // Optional: allow Enter key on inputs to trigger submit
+  const inputs = form.querySelectorAll('input, select');
+  inputs.forEach(inp => {
+    inp.addEventListener('keydown', (ev) => {
+      if (ev.key === 'Enter') {
+        ev.preventDefault();
+        searchFlights();
+      }
+    });
+  });
+});
+
+
+
+
+
+
+
+
+// --------------------------
+// Populate mobile date fields
+// --------------------------
+window.addEventListener("load", () => {
+  const day = document.getElementById("mDay");
+  const month = document.getElementById("mMonth");
+  const year = document.getElementById("mYear");
+
+  // Days
   for (let d = 1; d <= 31; d++) {
     day.innerHTML += `<option value="${d}">${d}</option>`;
   }
 
-  // MONTHS
+  // Months
   const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  months.forEach((m, i) => {
+  months.forEach((m,i) => {
     month.innerHTML += `<option value="${i+1}">${m}</option>`;
   });
 
-  // YEARS
-  let currentYear = new Date().getFullYear();
-  for (let y = currentYear; y <= currentYear + 5; y++) {
+  // Years
+  const start = new Date().getFullYear();
+  for (let y = start; y <= start + 2; y++) {
     year.innerHTML += `<option value="${y}">${y}</option>`;
   }
-};
+});
 
+// --------------------------
+// SEARCH BUTTON FUNCTION
+// --------------------------
 function searchFlights() {
-  let from = document.querySelector("input[name='from']").value;
-  let to = document.querySelector("input[name='to']").value;
-  let finalDate;
+  const from = document.querySelector("input[name='from']").value.trim();
+  const to = document.querySelector("input[name='to']").value.trim();
 
-  // Desktop mode
-  if (window.innerWidth > 600) {
-    finalDate = document.getElementById("desktop-date").value;
-  } 
-  // Mobile mode
-  else {
-    let d = document.getElementById("day").value;
-    let m = document.getElementById("month").value;
-    let y = document.getElementById("year").value;
+  // Desktop date
+  const deskDate = document.getElementById("dDate").value;
 
-    if (d && m && y) {
-      finalDate = `${y}-${m}-${d}`;
-    } else {
-      finalDate = "";
-    }
+  // Mobile date
+  const mDay = document.getElementById("mDay").value;
+  const mMonth = document.getElementById("mMonth").value;
+  const mYear = document.getElementById("mYear").value;
+
+  let finalDate = deskDate;
+
+  // If mobile fields are filled, use them
+  if (mDay !== "" && mMonth !== "" && mYear !== "") {
+    finalDate = `${mYear}-${String(mMonth).padStart(2,"0")}-${String(mDay).padStart(2,"0")}`;
   }
 
   // Validation
-  if (!from || !to || !finalDate) {
-    alert("Please fill all required fields");
+  if (from === "" || to === "" || finalDate === "") {
+    document.getElementById("statusMsg").innerText = "❗ Please fill all required fields";
     return;
   }
 
-  // Redirect to another page
-  window.location.href = "404.html"; 
+  // SUCCESS
+  // document.getElementById("statusMsg").innerText = "✔ Searching flights...";
+
+  // Redirect to booking page (you can change the link)
+  setTimeout(() => {
+    window.location.href = "404.html?from=" + from + "&to=" + to + "&date=" + finalDate;
+  }, 10);
 }
 
