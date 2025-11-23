@@ -541,6 +541,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 
 
+/* Make date input fully visible on mobile */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* For iPhone/iOS – force visible text */
+input[type="date"]:focus {
+    color: #000 !important;
+}
+
+/* Fix placeholder text before selection */
+input[type="date"]::before {
+    content: attr(placeholder);
+    color: #888;
+    margin-right: 10px;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    content: "" !important;
+}
 
 
 
