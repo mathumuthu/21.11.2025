@@ -75,6 +75,18 @@ document.querySelectorAll("footer a").forEach(link => {
 
 
 
+document.querySelectorAll(".date-input").forEach(input => {
+  input.addEventListener("touchstart", () => {
+    input.showPicker?.();   // Works on modern mobile browsers
+  });
+});
+
+
+
+
+
+
+
 
 
 
@@ -140,6 +152,29 @@ document.querySelectorAll("footer a").forEach(link => {
 //     }
 //   });
 // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

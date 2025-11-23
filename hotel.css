@@ -856,6 +856,80 @@ input[type="date"]::-webkit-date-and-time-value {
 
 
 
+/* Fix: Mobile browsers blocking date picker */
+.date-input {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Fix iPhone / Android - remove default styling issues */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Prevent parent overlay blocking date picker */
+.booking-wrapper, .booking-card {
+  overflow: visible !important;
+}
+
+/* Fix tap issue */
+.date-input:focus {
+  border-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
