@@ -42,7 +42,7 @@
               <li><a href="./index.html">Home page 1 </a></li>
             </ul>
           </li>
-          <li><a href="./track.html">Track ur travel</a></li>
+          <li><a href="./track.html">Track travel</a></li>
           <li><a href="./hotel.html">Hotels in luxury</a></li>
           <li><a href="./pt.html">Prepare to travel</a></li>
           <li><a href="./cancell.html">Cancellations</a></li>
@@ -98,26 +98,66 @@
 </section> -->
 
 <!-- BOOKING FORM -->
- <div class="booking-wrapper">
-  <div class="booking-card">
-    <h2>Book Your Stay</h2>
+ 
+<div class="container">
+  <h1>Book your stay</h1>
+  <p class="lead">Choose check-in and check-out dates — mobile friendly</p>
 
-    <label for="checkin">Check-In</label>
-    <input type="date" id="checkin" name="checkin" placeholder="Select check-in">
+  <div class="card" role="form" aria-labelledby="booking-form">
+    <!-- FROM / TO text inputs (hotel/city) -->
+    <label class="field">
+      <input class="text-input" placeholder="From (city or hotel name)" id="fromInput" />
+    </label>
 
-    <label for="checkout">Check-Out</label>
-    <input type="date" id="checkout" name="checkout" placeholder="Select check-out">
+    <label class="field">
+      <input class="text-input" placeholder="To (city or hotel name)" id="toInput" />
+    </label>
 
-    <label for="guests">Guests</label>
-    <select id="guests" name="guests">
-      <option value="" selected disabled>Select Guests</option>
-      <option value="1">1 Guest</option>
-      <option value="2">2 Guests</option>
-      <option value="3">3 Guests</option>
-      <option value="4">4+ Guests</option>
-    </select>
+    <!-- CHECK-IN -->
+    <div class="group" aria-label="Check in">
+      <div class="group-title">Check-in</div>
+      <div class="row" id="checkinRow">
+        <div class="select-card">
+          <label class="select-label" for="ci-day">Day</label>
+          <select id="ci-day" aria-label="Check in day"></select>
+        </div>
+        <div class="select-card">
+          <label class="select-label" for="ci-month">Month</label>
+          <select id="ci-month" aria-label="Check in month"></select>
+        </div>
+        <div class="select-card">
+          <label class="select-label" for="ci-year">Year</label>
+          <select id="ci-year" aria-label="Check in year"></select>
+        </div>
+      </div>
+    </div>
 
-    <button class="check-btn" type="button">Check Availability</button>
+    <!-- CHECK-OUT -->
+    <div class="group" aria-label="Check out">
+      <div class="group-title">Check-out</div>
+      <div class="row" id="checkoutRow">
+        <div class="select-card">
+          <label class="select-label" for="co-day">Day</label>
+          <select id="co-day" aria-label="Check out day"></select>
+        </div>
+        <div class="select-card">
+          <label class="select-label" for="co-month">Month</label>
+          <select id="co-month" aria-label="Check out month"></select>
+        </div>
+        <div class="select-card">
+          <label class="select-label" for="co-year">Year</label>
+          <select id="co-year" aria-label="Check out year"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="error" id="dateError">Check-out must be after check-in.</div>
+
+    <div style="margin-top:18px;">
+      <button class="button" id="searchBtn">Search Rooms</button>
+    </div>
+
+    <div class="helper">Tip: Use the selects to pick day, month and year on mobile.</div>
   </div>
 </div>
 
